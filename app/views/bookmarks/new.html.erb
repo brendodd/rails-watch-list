@@ -1,7 +1,5 @@
-<%= form_with model: @bookmark do |l| %>
-  <%= l.label :comment %>
-  <%= l.text_field :comment %>
-  <%= l.label :movie_id %>
-  <%= l.text_field :movie_id %>
+<%= simple_form_for [@list, @bookmark] do |l| %>
+  <%= l.input :comment %>
+  <%= l.input :movie_id, collection: Movie.all %>
   <%= l.submit %>
 <% end %>
