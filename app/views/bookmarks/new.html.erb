@@ -1,0 +1,7 @@
+<%= form_with model: @bookmark do |l| %>
+  <%= l.label :comment %>
+  <%= l.text_field :comment %>
+  <%= l.label :movie_id %>
+  <%= l.text_field :movie_id %>
+  <%= l.submit %>
+<% end %>
